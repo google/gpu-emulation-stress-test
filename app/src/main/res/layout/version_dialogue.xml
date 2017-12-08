@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/version_dialog_bottom_padding"
+    android:paddingLeft="@dimen/version_dialog_large_padding"
+    android:paddingRight="@dimen/version_dialog_large_padding"
+    android:paddingTop="@dimen/version_dialog_large_padding">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        tools:src="@mipmap/ic_launcher"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/version_dialog_start_padding">
+
+        <TextView
+            style="@style/dialogueTitleStyle"
+            android:id="@+id/app_title"
+            tools:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            style="@style/dialogueVersionStyle"
+            tools:text="Version 1.0"
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/copyright"
+            style="@style/dialogueCopyrightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/version_dialog_copyright_top_margin"
+            android:layout_marginBottom="@dimen/version_dialog_copyright_bottom_margin"
+            android:singleLine="true"
+            android:text="@string/copyright" />
+
+        <TextView
+            android:id="@+id/test_description"
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:text="@string/test_description" />
+    </LinearLayout>
+
+</LinearLayout>

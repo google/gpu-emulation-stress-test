@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">230dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+    <!-- version dialog dimens -->
+    <dimen name="version_dialog_large_padding">24dp</dimen>
+    <dimen name="version_dialog_bottom_padding">20dp</dimen>
+    <dimen name="version_dialog_start_padding">14dp</dimen>
+    <dimen name="version_dialog_copyright_top_margin">10dp</dimen>
+    <dimen name="version_dialog_copyright_bottom_margin">10dp</dimen>
+
+
+</resources>

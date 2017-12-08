@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="gpu_emulation_stress_test_theme" parent="Theme.AppCompat.NoActionBar" >
+        <item name="colorAccent">@android:color/holo_green_dark</item>
+        <item name="android:colorForeground">@android:color/holo_green_light</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- Styles for About Dialogue. -->
+    <style name="dialogueTitleStyle" parent="AppTheme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="dialogueVersionStyle" parent="AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="dialogueCopyrightStyle" parent="AppTheme">
+        <item name="android:textSize">12sp</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+</resources>

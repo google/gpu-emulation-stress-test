@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#546e7a</color>
+    <color name="colorPrimaryDark">#29434e</color>
+    <color name="colorAccent">#689f38</color>
+    <color name="multitouchSurface">#FF757575</color>
+    <color name="colorDialogDarkBackground">#424242</color>
+    <color name="colorDialogDarkText">#FFFFFF</color>
+    <color name="FABcloseTint">@android:color/white</color>
+    <color name="testLayoutColor">@color/colorAccent</color>
+</resources>

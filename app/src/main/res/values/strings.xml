@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GPU Emulation Stress Test</string>
+    <string name="action_about">About</string>
+
+    <!-- The format of the subtitle which shows the version number. -->
+    <string name="version_number_format" translation_description="">Version %1$s</string>
+
+    <!-- Copyright of the application. -->
+    <string name="copyright" translation_description="">&#169;2017 Android Open Source Project</string>
+
+    <string name="test_description" translation_description="">
+        This app tests overhead of GPU emulation in the Android Emulator.
+        Both OpenGL ES 2 and OpenGL ES 3 are tested, with many objects being rendered
+        in order to stress the OpenGL command channel between guest and host.
+    </string>
+
+    <!-- The format of stress test results, showing the number of objects and FPS achieved. -->
+    <string name="test_result_format" translation_description="">%d objects at %f FPS</string>
+
+</resources>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.android.gpu_emulation_stress_test.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/results_layout"
+        android:minHeight="420dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="34dp"
+            android:text="Emulated OpenGL ES Version"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="34dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:checkedButton="@+id/radioButton_GL2"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="62dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/resultGL2"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/numObjectsSeekBar">
+
+            <RadioButton
+                android:id="@+id/radioButton_GL2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OpenGL ES 2.0" />
+
+            <RadioButton
+                android:id="@+id/radioButton_GL3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OpenGL ES 3.0" />
+
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="164dp"
+            android:text="Guest -> Host OpenGL command traffic level (objects)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <SeekBar
+            android:id="@+id/numObjectsSeekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="12"
+            android:progress="1"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="221dp"
+            app:layout_constraintEnd_toEndOf="@+id/seekbarValue"
+            app:layout_constraintTop_toTopOf="@+id/seekbarValue"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="@+id/seekbarValue"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="35dp" />
+
+
+        <TextView
+            android:id="@+id/seekbarValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,000"
+            tools:layout_editor_absoluteX="275dp"
+            tools:layout_editor_absoluteY="221dp"
+            tools:text="1,200"
+            android:layout_marginTop="38dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/resultsLabel"
+            app:layout_constraintEnd_toEndOf="@+id/horizontalBar"
+            android:layout_marginStart="73dp"
+            android:layout_marginEnd="71dp" />
+
+        <View
+            android:id="@+id/horizontalBar"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="269dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/seekbarValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/resultsLabel"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp" />
+
+        <TextView
+            android:id="@+id/resultsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="16dp"
+            android:text="Results"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toTopOf="@+id/resultGL2Label"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="297dp" />
+
+        <TextView
+            android:id="@+id/resultGL2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OpenGL ES 2.0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="336dp"
+            app:layout_constraintStart_toStartOf="@+id/resultGL3Label"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toTopOf="@+id/resultGL3Label" />
+
+        <TextView
+            android:id="@+id/resultGL3Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OpenGL ES 3.0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="366dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="38dp"
+            android:layout_marginBottom="42dp" />
+
+        <TextView
+            android:id="@+id/resultGL2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="336dp"
+            tools:text="14.9975"
+            app:layout_constraintStart_toStartOf="@+id/resultGL3"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toTopOf="@+id/resultGL3" />
+
+        <TextView
+            android:id="@+id/resultGL3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="366dp"
+            tools:text="30.0243"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toEndOf="@+id/resultGL3Label"
+            android:layout_marginBottom="42dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
