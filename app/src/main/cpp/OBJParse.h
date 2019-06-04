@@ -54,7 +54,7 @@ public:
     };
 
     std::vector<VertexAttributes> vertexData;
-    std::vector<unsigned int> indexData;
+    std::vector<unsigned short> indexData;
 private:
     std::vector<std::vector<float> > obj_v;
     std::vector<std::vector<float> > obj_vn;
@@ -62,7 +62,7 @@ private:
     std::vector<std::vector<uint32_t> > obj_f;
 
     std::map<VertexKey, VertexAttributes, VertexKeyCompare> vertexDataMap;
-    std::map<VertexKey, unsigned int, VertexKeyCompare> indexDataMap;
+    std::map<VertexKey, unsigned short, VertexKeyCompare> indexDataMap;
 };
 
 
