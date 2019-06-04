@@ -92,10 +92,16 @@ OBJParse::OBJParse(const std::string &objFileName) {
 
     }
 
-    unsigned int actualIndexMapIndex = 0;
+    unsigned short actualIndexMapIndex = 0;
     for (auto it : vertexDataMap) {
         indexDataMap[it.first] = actualIndexMapIndex;
         actualIndexMapIndex++;
+        // check for overflow
+        if (actualIndexMapIndex == 0) {
+            // indicates that there are more than 2^16 distinct vertices,
+            // so indices won't fit in an unsigned short
+            __android_log_print(ANDROID_LOG_ERROR, "OBJParse", "out of indices!!!!!!!\n");
+        }
         vertexData.push_back(it.second);
     }
 

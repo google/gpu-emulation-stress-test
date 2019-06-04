@@ -353,7 +353,7 @@ void GLES2Renderer::initRenderModel(const RenderModel &model) {
                  model.geometry.vertexData.size() * sizeof(OBJParse::VertexAttributes),
                  &model.geometry.vertexData[0], GL_STATIC_DRAW);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER,
-                 model.geometry.indexData.size() * sizeof(uint32_t),
+                 model.geometry.indexData.size() * sizeof(uint16_t),
                  &model.geometry.indexData[0], GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(aPosLoc);
@@ -553,7 +553,7 @@ void GLES2Renderer::draw() {
                 changeRenderState(obj.renderHandle, true);
                 glUniformMatrix4fv(depthMapWorldMatrixLoc,
                                    1, GL_FALSE, (currentLightMatrix * obj.worldMatrix).vals);
-                glDrawElements(GL_TRIANGLES, obj.indexCount, GL_UNSIGNED_INT, 0);
+                glDrawElements(GL_TRIANGLES, obj.indexCount, GL_UNSIGNED_SHORT, 0);
             }
         }
 
@@ -591,7 +591,7 @@ void GLES2Renderer::draw() {
                                    1, GL_FALSE, currentCameraMatrix.vals);
                 glUniformMatrix4fv(shadowRenderLightMatrixLoc,
                                    1, GL_FALSE, currentLightMatrix.vals);
-                glDrawElements(GL_TRIANGLES, obj.indexCount, GL_UNSIGNED_INT, 0);
+                glDrawElements(GL_TRIANGLES, obj.indexCount, GL_UNSIGNED_SHORT, 0);
             }
         }
 
@@ -607,7 +607,7 @@ void GLES2Renderer::draw() {
                                1, GL_FALSE, (obj.worldMatrix).vals);
             glUniformMatrix4fv(currRenderState.uCameraMatrixLoc,
                                1, GL_FALSE, currentCameraMatrix.vals);
-            glDrawElements(GL_TRIANGLES, obj.indexCount, GL_UNSIGNED_INT, 0);
+            glDrawElements(GL_TRIANGLES, obj.indexCount, GL_UNSIGNED_SHORT, 0);
         }
     }
 
